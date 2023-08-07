@@ -56,7 +56,7 @@ table {
       flex-grow: 1;
       display: flex;
       flex-direction: column;
-      overflow: hidden;
+      // overflow: hidden;
       .caseTitle {
         font-size: rem(28);
         font-weight: 500;
@@ -129,6 +129,7 @@ table {
   .listBox {
     flex-grow: 1;
     .item {
+      box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
       cursor: pointer;
       & + .item {
         margin-top: 20px;
@@ -329,7 +330,7 @@ table {
       &::-webkit-scrollbar-thumb {
         border-radius: 100px;
         box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-        background: rgba(191, 95, 70, 1);
+        background: #116c72;
       }
       &::-webkit-scrollbar-track {
         box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
