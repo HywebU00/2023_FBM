@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>交通部高速公路局</title>
+    <link rel="stylesheet" href="css/demo.css" />
+    <style>
+      .indexMain {
+        display: flex;
+        flex-direction: column;
+      }
+      .albumBox {
+        height: 70vh;
+      }
+    </style>
+  </head>
+  <body class="innerPage">
+    <div class="wrapper">
+      <header>
+        <script src="./include/Menu.js"></script>
+      </header>
+      <main class="indexMain pageProject">
+        <table>
+          <tbody>
+            <tr>
+              <td><img src="./images/album_01.png" alt="" class="wow fadeInDown" data-wow-delay="0s" /></td>
+              <td style="text-align: right"><img src="./images/album_02.png" alt="" class="wow fadeInDown" data-wow-delay="0s" /></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="albumBox wow fadeInUp" data-wow-delay="0.2s">
+          <div class="content">
+            <img src="./images/album_03.png" alt="" />
+          </div>
+        </div>
+        <div class="copyright">2023 © 交通部高速公路局 版權所有</div>
+        <!-- <footer>
+          <div class="footerBox">
+            <div class="container">
+              <div class="logo"><a href="#"></a></div>
+              <nav>
+                <ul></ul>
+              </nav>
+              <div class="copyright">All Rights Reserved by TAITRA 2023</div>
+            </div>
+          </div>
+        </footer> -->
+      </main>
+    </div>
+    <div class="lightBoxOuter">
+      <div class="lightBox">
+        <div class="content">
+          <div class="img"><img src="./images/lightBox.jpg" alt="" /> <button class="send"></button></div>
+        </div>
+      </div>
+    </div>
+    <script src="./plugins/WOW-master/dist/wow.min.js"></script>
+    <script src="./plugins/_base.js"></script>
+    <script>
+      const project = document.querySelector('[href="album.html"]');
+      project.parentElement.classList.add('active');
+    </script>
+  </body>
+</html>
