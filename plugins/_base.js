@@ -13,7 +13,7 @@
 //   item.parentElement.classList.add('next-lv');
 // });
 
-(function () {
+window.addEventListener('load', () => {
   let options = {};
   // let removeAnimate = document.querySelector('.removeAnimate');
 
@@ -35,4 +35,4 @@
     item.style.animationDelay = delay;
     observer.observe(item);
   });
-})();
+});
