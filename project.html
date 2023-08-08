@@ -61,7 +61,7 @@
                     <div class="title">國道一號五股交流道南入或南出匝道交通壅塞日益重，評估增設第二交流道可行性</div>
                     <hr />
                     <div class="notice">進入填報</div>
-                    <div class="description">未來eTag全面上線後，範圍、對象將全面考量，因規模擴大且無限定，應可有效推廣ETC</div>
+                    <div class="description">五股交流道南入及南出匝道部分，高公局前已採匯出入車道由1車道調整為2車道等交通工程手段改善在案..</div>
                     <div class="bottomBox">
                       <time>112/05/20</time>
                       <div class="caseNumber">096-03</div>
@@ -249,9 +249,6 @@
       let items = document.querySelectorAll('.projectBox .item:not(.done)');
       const send = document.querySelector('.lightBox .send');
       let nowClick;
-      const textContent = document.createElement('div');
-      textContent.className = 'description';
-      textContent.textContent = '測試用文案測試用文案測試用，測試用文案測試用文案測試用文案';
 
       items.forEach((item, index) => {
         item.addEventListener('click', function (e) {
@@ -262,8 +259,6 @@
         });
       });
       send.addEventListener('click', function (e) {
-        nowClick.querySelector('.notice').style.display = 'none';
-        nowClick.querySelector('.description').style.display = 'block';
         nowClick.classList.add('done');
         _body.classList.remove('popup');
       });

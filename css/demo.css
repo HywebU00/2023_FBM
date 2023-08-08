@@ -1279,7 +1279,7 @@ table img {
   display: none;
 }
 .pageProject .listBox .item.done .description {
-  display: block;
+  display: -webkit-box;
 }
 .pageProject .listBox .title {
   font-size: 1.1875rem;
@@ -1297,12 +1297,11 @@ table img {
   color: #7e7e7e;
   font-weight: 500;
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
+  display: none;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   margin-bottom: 15px;
   order: 2;
-  display: none;
 }
 .pageProject .listBox hr {
   width: 100%;
