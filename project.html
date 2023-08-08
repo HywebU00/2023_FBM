@@ -42,36 +42,39 @@
                 <div class="count">3</div>
               </div>
               <div class="listBox" id="trackBox">
-                <div class="item done new report" data-url="popup.html">
+                <div class="item new report" data-url="popup.html">
                   <div class="itemTitle">院首長交辦</div>
                   <div class="content">
                     <div class="title">本會中長程計畫至今年或明年到期者，請各業務單位就執行成效，加以評估，並依評估結果</div>
                     <hr />
                     <div class="notice">進入填報</div>
+                    <div class="description">未來eTag全面上線後，範圍、對象將全面考量，因規模擴大且無限定，應可有效推廣ETC</div>
                     <div class="bottomBox">
                       <time>112/03/30</time>
                       <div class="caseNumber">324-10</div>
                     </div>
                   </div>
                 </div>
-                <div class="item done meeting">
+                <div class="item meeting">
                   <div class="itemTitle">立委關切</div>
                   <div class="content">
                     <div class="title">國道一號五股交流道南入或南出匝道交通壅塞日益重，評估增設第二交流道可行性</div>
                     <hr />
-                    <div class="description">本案俟考試院修訂「公務人員特種考試原住民族考試規則」後，即配合研商所需經費事宜。</div>
+                    <div class="notice">進入填報</div>
+                    <div class="description">未來eTag全面上線後，範圍、對象將全面考量，因規模擴大且無限定，應可有效推廣ETC</div>
                     <div class="bottomBox">
                       <time>112/05/20</time>
                       <div class="caseNumber">096-03</div>
                     </div>
                   </div>
                 </div>
-                <div class="item done report">
+                <div class="item report">
                   <div class="itemTitle">院首長交辦</div>
                   <div class="content">
                     <div class="title">「公務員廉政倫理規範」問答集請人事室向法務部索取分送各同仁，以增進同仁瞭解本規範規定。瞭解本規範規定。以評估，並依評估結果，掌握...</div>
                     <hr />
                     <div class="notice">進入填報</div>
+                    <div class="description">未來eTag全面上線後，範圍、對象將全面考量，因規模擴大且無限定，應可有效推廣ETC</div>
                     <div class="bottomBox">
                       <time class="noticeColor">112/03/21</time>
                       <div class="caseNumber">324-10</div>
@@ -93,6 +96,7 @@
                   <div class="content">
                     <div class="title">建議增設五股第二交流道一節，先辦理可行性評估並確認可行性</div>
                     <hr />
+                    <div class="notice">進入填報</div>
                     <div class="description">新北市政府已依據都市發展情形及實際交通需求進行評估，並提出申請。</div>
                     <div class="bottomBox">
                       <time>112/03/30</time>
@@ -105,6 +109,7 @@
                   <div class="content">
                     <div class="title">「國道3號增設金城交流道工程與新北市土城司法園區區段徵收工程」辦理工程招標作業</div>
                     <hr />
+                    <div class="notice">進入填報</div>
                     <div class="description">本年2月2日與內政部土地重劃工程處完成「國道3號增設金城交流道工程與新北市土城司法園區區段徵收工程」界面協調作業</div>
                     <div class="bottomBox">
                       <time>112/03/12</time>
@@ -127,6 +132,7 @@
                   <div class="content">
                     <div class="title">高速公路ETC電子收費系統試行多年，針對去年基隆試辦之eTag，預計在今年三月底全面上線供裝</div>
                     <hr />
+                    <div class="notice">進入填報</div>
                     <div class="description">未來eTag全面上線後，範圍、對象將全面考量，因規模擴大且無限定，應可有效推廣ETC</div>
                     <div class="bottomBox">
                       <time>112/02/28</time>
@@ -149,6 +155,7 @@
                   <div class="content">
                     <div class="title">電動車充電設備設置，研議先由政府機關在公有停車場、重要交通節點、高速公路服務區等地設置</div>
                     <hr />
+                    <div class="notice">進入填報</div>
                     <div class="description">國發會「我國淨零排放目標期程及因應作為第9次研商會議」結論，業請交通部主政辦理推動運具電動化整體環境配套措施含電動車充電設備..</div>
                     <div class="bottomBox">
                       <time>112/02/28</time>
@@ -161,6 +168,7 @@
                   <div class="content">
                     <div class="title">開啟駕駛輔助系統車輛在國道追撞事故，應持續強化相關宣導作為</div>
                     <hr />
+                    <div class="notice">進入填報</div>
                     <div class="description">已進行宣導提醒行駛國道應隨時注意車前狀況，並請警政署評估納入事故調查統計收工程」界面協調作業</div>
                     <div class="bottomBox">
                       <time>112/02/25</time>
@@ -183,6 +191,7 @@
                   <div class="content">
                     <div class="title">針對「國道車輛拖救服務」限定「拖救車至少10輛」</div>
                     <hr />
+                    <div class="notice">進入填報</div>
                     <div class="description">針對「國道車輛拖救服務」限定「拖救車至少10輛」</div>
                     <div class="bottomBox">
                       <time>112/01/16</time>
@@ -237,15 +246,25 @@
       });
 
       const _body = document.querySelector('body');
-      const items = document.querySelectorAll('.projectBox .item');
+      let items = document.querySelectorAll('.projectBox .item:not(.done)');
       const send = document.querySelector('.lightBox .send');
-      console.log(send);
+      let nowClick;
+      const textContent = document.createElement('div');
+      textContent.className = 'description';
+      textContent.textContent = '測試用文案測試用文案測試用，測試用文案測試用文案測試用文案';
+
       items.forEach((item, index) => {
         item.addEventListener('click', function (e) {
+          console.log(item.classList.contains('done'));
+          if (item.classList.contains('done')) return;
           _body.classList.add('popup');
+          nowClick = item;
         });
       });
       send.addEventListener('click', function (e) {
+        nowClick.querySelector('.notice').style.display = 'none';
+        nowClick.querySelector('.description').style.display = 'block';
+        nowClick.classList.add('done');
         _body.classList.remove('popup');
       });
 
